@@ -39,7 +39,6 @@ class Visit(models.Model):
         delta = leaved_at - entered_at
         return delta
 
-
     def is_visit_long(self, minutes=MINUTES_IN_HOUR):
         duration = self.get_duration()
         duration_minutes = int(duration.total_seconds() // self.SECONDS_IN_MINUTE)
